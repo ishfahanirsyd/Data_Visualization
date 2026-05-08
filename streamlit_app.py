@@ -89,9 +89,13 @@ for title, filename, caption in plots:
     image = Image.open(f"plots/{filename}")
 
     st.image(
-        image,
-        caption=caption,
-        width="stretch"
+    image,
+    width="stretch"
+    )
+
+    st.markdown(
+        f"<p style='font-size:18px;'>{caption}</p>",
+        unsafe_allow_html=True
     )
 
     st.write("---")
